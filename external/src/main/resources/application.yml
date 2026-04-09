@@ -1,0 +1,18 @@
+
+spring:
+  application:
+    name: external-api-module
+
+
+external:
+  api:
+
+    client: jsonplaceholder
+    jsonplaceholder:
+      base-url: https://jsonplaceholder.typicode.com
+
+
+logging:
+  level:
+    com.example.demo: DEBUG
+    io.github.resilience4j: INFO

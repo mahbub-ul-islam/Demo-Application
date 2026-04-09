@@ -1,0 +1,809 @@
+{
+  "info": {
+    "_postman_id": "58e88648-3eb5-4fe5-b595-343e3bf3fb25",
+    "name": "Organization",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "26901404"
+  },
+  "item": [
+    {
+      "name": "employee",
+      "item": [
+        {
+          "name": "createEmployee",
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john.doe@company.com\",\r\n  \"salary\": 75000.00,\r\n  \"departmentId\": \"550e8400-e29b-41d4-a716-446655440003\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/employees",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateEmployeeByID",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"Jane Smith1\",\r\n  \"email\": \"ane.smith@example.com\",\r\n  \"salary\": 85000.00,\r\n  \"departmentId\": \"550e8400-e29b-41d4-a716-446655440002\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/employees?id=550e8400-e29b-41d4-a716-446655440010",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440010"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllEmployee",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/employees",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEmployeeByID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/employees?id=550e8400-e29b-41d4-a716-446655440012",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440012"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getEmployeeByID",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/employees?id=550e8400-e29b-41d4-a716-446655440010",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "employees"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440010"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "organization",
+      "item": [
+        {
+          "name": "updateEmployeeByID",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "noauth"
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"John Smith1\",\r\n  \"email\": \"john.smith@company.com\",\r\n  \"salary\": 85000.00,\r\n  \"departmentId\": \"550e8400-e29b-41d4-a716-446655440002\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/departments-with-employees?id=550e8400-e29b-41d4-a716-446655440002",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "departments-with-employees"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440002"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get all departments (no search term)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=departments&page=0&size=10&sortBy=name&direction=ASC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "departments"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "name"
+                },
+                {
+                  "key": "direction",
+                  "value": "ASC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search departments with pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=departments&searchTerm=Human Resources&page=0&size=10&sortBy=name&direction=ASC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "departments"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "Human Resources"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "name"
+                },
+                {
+                  "key": "direction",
+                  "value": "ASC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search departments with sorting by code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=departments&page=1&size=1&sortBy=code&direction=DESC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "departments"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "size",
+                  "value": "1"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "code"
+                },
+                {
+                  "key": "direction",
+                  "value": "DESC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search employees with pagination",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=employees&searchTerm=john&page=0&size=10&sortBy=name&direction=ASC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "employees"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "john"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "name"
+                },
+                {
+                  "key": "direction",
+                  "value": "ASC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search employees by department id",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=employees&departmentId=550e8400-e29b-41d4-a716-446655440001&page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "employees"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "550e8400-e29b-41d4-a716-446655440001"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search employees by department code",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=employees&departmentCode=IT&page=0&size=10",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "employees"
+                },
+                {
+                  "key": "departmentCode",
+                  "value": "IT"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "10"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search employees with both filters",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=employees&searchTerm=smith&departmentId=550e8400-e29b-41d4-a716-446655440002&page=0&size=5&sortBy=email&direction=ASC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "employees"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "smith"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "550e8400-e29b-41d4-a716-446655440002"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "email"
+                },
+                {
+                  "key": "direction",
+                  "value": "ASC"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Search employees with both filters Copy",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/organization/search?type=employees&searchTerm=smith&departmentId=550e8400-e29b-41d4-a716-446655440002&page=0&size=5&sortBy=email&direction=ASC",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "organization",
+                "search"
+              ],
+              "query": [
+                {
+                  "key": "type",
+                  "value": "employees"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "smith"
+                },
+                {
+                  "key": "departmentId",
+                  "value": "550e8400-e29b-41d4-a716-446655440002"
+                },
+                {
+                  "key": "page",
+                  "value": "0"
+                },
+                {
+                  "key": "size",
+                  "value": "5"
+                },
+                {
+                  "key": "sortBy",
+                  "value": "email"
+                },
+                {
+                  "key": "direction",
+                  "value": "ASC"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "depertment",
+      "item": [
+        {
+          "name": "getAllDepartment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/departments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAllDepartmentById",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/departments?id=550e8400-e29b-41d4-a716-446655440002",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "departments"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440002",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "createDepartment",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"string3\",\r\n  \"code\": \"string3\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/departments",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "departments"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateDepartment",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"name\": \"string5\",\r\n  \"code\": \"string5\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:9090/api/v1/departments?id=550e8400-e29b-41d4-a716-446655440001",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "departments"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440001"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteDepartmentById",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/departments?id=550e8400-e29b-41d4-a716-446655440001",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "departments"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "550e8400-e29b-41d4-a716-446655440001"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "External",
+      "item": [
+        {
+          "name": "external api call",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:9090/api/v1/external/call?endpoint=/posts/1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "9090",
+              "path": [
+                "api",
+                "v1",
+                "external",
+                "call"
+              ],
+              "query": [
+                {
+                  "key": "endpoint",
+                  "value": "/posts/1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "external api check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "https://jsonplaceholder.typicode.com/posts/1",
+              "protocol": "https",
+              "host": [
+                "jsonplaceholder",
+                "typicode",
+                "com"
+              ],
+              "path": [
+                "posts",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
